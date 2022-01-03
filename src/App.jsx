@@ -37,41 +37,28 @@ function App() {
         <section>
           <h1>Razas de Perros</h1>
           <ul className="breedCardContainer">
-            <li className="breedCard"> 
-              <div className="contenedorImagen">
-                <img src={collie} alt="Border Collie"/>
-              </div>
-              <span className="breedTitle">Border Collie</span>
-            </li>
-            <li className="breedCard"> 
-              <div className="contenedorImagen">
-                <img src={beagle} alt="Beagle"/>
-              </div>
-              <span className="breedTitle">Beagle</span>
-            </li>
-            <li className="breedCard"> 
-              <div className="contenedorImagen">
-              <img src={golden} alt="Golden Retriever"/>
-              </div>
-              <span className="breedTitle">Golden Retriever</span>
-            </li>
-            <li className="breedCard"> 
-              <div className="contenedorImagen">
-              <img src={doberman} alt="Doberman"/>
-              </div>
-              <span className="breedTitle">Doberman</span>
-            </li>
-            <li className="breedCard"> 
-              <div className="contenedorImagen">
-              <img src={poodle} alt="Fresh Poodle"/>
-              </div>
-              <span className="breedTitle">Fresh Poodle</span>
-            </li>
+           <CardRazasPerros nombreRaza='Beagle'  imagen={beagle} />
+           <CardRazasPerros nombreRaza='Boder Collie'  imagen={collie} />
+           <CardRazasPerros nombreRaza='Fresh Poodle'  imagen={poodle} />
+           <CardRazasPerros nombreRaza='Golden Retriever'  imagen={golden} />
+           <CardRazasPerros nombreRaza='Doberman'  imagen={doberman} />
           </ul>
         </section>
+        <section></section>
       </main>
+      <footer></footer>
     </div>
   );
 }
 
+function CardRazasPerros({nombreRaza, imagen}) {
+  return (
+    <li className='breedCard'>
+      <div className = 'contenedorImagen'>
+        <img src= {imagen} alt={nombreRaza}/>
+      </div>
+      <span className = 'breedTitle'>{nombreRaza}</span>
+    </li>
+  );
+}
 export default App;
