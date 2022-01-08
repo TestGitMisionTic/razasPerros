@@ -1,10 +1,12 @@
 import React from 'react'
 
+
 function Beagle() {
     return (
         <div>
-            Esta es la pagina del Beagle
+            <div>Esta es la pagina del Beagle</div>
         </div>
+        
     )
 }
 
